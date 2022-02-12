@@ -1,0 +1,46 @@
+// Hindi Translations
+const Map<String, String> hiIN = {
+  'Maya Berkovskaya': 'इस परियोजना में आपका स्वागत है',
+  'Language' : 'भाषा',
+  'SarojKumarPadhi' : 'सरोज कुमार पाधि',
+  'Active status' : 'सक्रिय स्थिति',
+  'Social Media': 'सामाजिक मीडिया',
+  'Donation' : 'दान',
+  'Add books' : 'किताबें जोड़ें',
+  'Favorites' : 'पसंदीदा पुस्तकें',
+  'Messages' : 'संदेश',
+  'Profile' : 'प्रोफ़ाइल',
+  'Ramayaan' : 'रामायण:',
+  'Mahabharat' : 'महाभारत',
+  'Shiv Puran' : 'शिव पुराण',
+  'Bharmha puran' : 'भर्मा पुराण',
+  'Gadur puran' : 'गदुर पुराण',
+  'Gita' : 'गीता',
+  'Arti' : 'आरती',
+  'Katha' : 'कथा',
+  'Pravachan' : 'प्रवचन',
+  'Mythology books' : 'पौराणिक पुस्तकें',
+  'Valmiki' : 'वाल्मीकि',
+  'Vyasa' : 'व्यास',
+  'Ramananda':'रामानंद',
+  'Vyasadeva':'व्यासदेव',
+  ' Active Readers':'  सक्रिय पाठक',
+  'Please share if to appriciate us':'कृपया साझा करें हमें सराहना करने के लिए',
+  'Read':'पढ़ें',
+  'Search Book':'किताबें ढूंढो',
+  'Shiv Arti':'शिव आरती',
+  'Lakshmi Mata Arti':'लक्ष्मी माता आरती',
+  'Sarawati Arti':'सरस्वती आरती',
+  'Durga Mata Arti':'दुर्गा माता आरती',
+  'Ambe Mata Arti':'अम्बे माता आर्टि',
+  'Gayatri MAta Arti':'गायत्री माता आरती',
+  'Sri Ganesha Arti':'श्री गणेश आरती',
+  'Sri Gagdish Arti':'श्री गगदीश आरती',
+  'Sri Krishna Arti':'श्री कृष्ण आरती',
+  'Santoshi Mata Arti':'संतोषी माता आरती',
+
+
+
+
+
+};
