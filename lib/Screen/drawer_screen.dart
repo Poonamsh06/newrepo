@@ -6,7 +6,6 @@ import '../localizationservice/localization.dart';
 import '../drawer/configration/configration.dart';
 
 class DrawerScreen extends StatefulWidget {
-
   @override
   _DrawerScreenState createState() => _DrawerScreenState();
 }
@@ -18,8 +17,6 @@ class _DrawerScreenState extends State<DrawerScreen> {
     super.initState();
     lng = LocalizationService().getCurrentLang();
   }
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -35,57 +32,63 @@ class _DrawerScreenState extends State<DrawerScreen> {
               leading: CircleAvatar(
                 backgroundImage: AssetImage('lib/images/Lucifer.jpeg'),
               ),
-              title: Text('SarojKumarPadhi'.tr,
+              title: Text(
+                'SarojKumarPadhi'.tr,
                 style: TextStyle(
                   fontSize: 18.0,
                   color: Colors.grey[200],
                   fontWeight: FontWeight.bold,
                   letterSpacing: 1,
-                ),),
-              subtitle: Text('Active status'.tr,
+                ),
+              ),
+              subtitle: Text(
+                'Active status'.tr,
                 style: TextStyle(
                   color: Colors.grey[500],
                   fontWeight: FontWeight.bold,
                   letterSpacing: .7,
-                ),),
+                ),
+              ),
             ),
           ),
           Column(
-            children: navList.map((e) => ListTile(
-              leading: Icon(
-                e['icon'],
-                color: Colors.grey[500],
-              ),
-              title: Text(
-                e['title'],
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: Colors.grey[500],
-                  fontSize: 18.0,
-                ),
-              ),
-            )).toList(),
+            children: navList
+                .map((e) => ListTile(
+                      leading: Icon(
+                        e['icon'],
+                        color: Colors.grey[500],
+                      ),
+                      title: Text(
+                        e['title'],
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.grey[500],
+                          fontSize: 18.0,
+                        ),
+                      ),
+                    ))
+                .toList(),
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Icon(  CupertinoIcons.globe,
-                color: Colors.grey[500],),
-              SizedBox(width: 20,),
+              Icon(
+                CupertinoIcons.globe,
+                color: Colors.grey[500],
+              ),
+              SizedBox(
+                width: 20,
+              ),
               Text(
                 "Language".tr,
-                style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.grey[500]),
+                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.grey[500]),
               ),
-
               Text("     "),
-              new DropdownButton<String>(
+              DropdownButton<String>(
                 items: LocalizationService.langs.map((String value) {
-                  return new DropdownMenuItem<String>(
+                  return DropdownMenuItem<String>(
                     value: value,
-                    child: new Text(
+                    child: Text(
                       value,
                       style: TextStyle(color: Colors.grey[500]),
                     ),
@@ -97,17 +100,14 @@ class _DrawerScreenState extends State<DrawerScreen> {
                 onChanged: (newVal) {
                   setState(() {
                     this.lng = newVal!;
-                    LocalizationService()
-                        .changeLocale(this.lng ?? 'eng');
+                    LocalizationService().changeLocale(this.lng);
                   });
                 },
               ),
             ],
           ),
         ],
-
       ),
     );
   }
 }
-
