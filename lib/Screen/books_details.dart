@@ -1,3 +1,4 @@
+import 'package:book_app_chief_suraj/models/book.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -8,12 +9,12 @@ import '../drawer/configration/configration.dart';
 
 // ignore: must_be_immutable
 class BookDetails extends StatefulWidget {
-  BookDetails({required this.catDetailsMap});
+  BookDetails({required this.info});
 
-  Map catDetailsMap;
+  BookInfo info;
 
   @override
-   _BookDetailsState createState() => _BookDetailsState();
+  _BookDetailsState createState() => _BookDetailsState();
 }
 
 class _BookDetailsState extends State<BookDetails> {
@@ -29,14 +30,12 @@ class _BookDetailsState extends State<BookDetails> {
               children: [
                 Expanded(
                   child: Container(
-                    color: (widget.catDetailsMap['id'] % 2 == 0)
-                        ? Colors.blueGrey[200]
-                        : Colors.orangeAccent[200],
+                    color: (widget.info.id % 2 == 0) ? Colors.blueGrey[200] : Colors.orangeAccent[200],
                     child: Align(
                       alignment: Alignment.center,
                       child: Hero(
-                        tag: 'pet${widget.catDetailsMap['id']}',
-                        child: Image.asset(widget.catDetailsMap['imagePath']),
+                        tag: 'pet${widget.info.id}',
+                        child: Image.asset(widget.info.imagePath),
                       ),
                     ),
                   ),
@@ -57,31 +56,24 @@ class _BookDetailsState extends State<BookDetails> {
                               Expanded(
                                 child: ListTile(
                                   leading: CircleAvatar(
-                                    backgroundImage:
-                                    AssetImage('lib/images/Lucifer.jpeg'),
+                                    backgroundImage: AssetImage('lib/images/Lucifer.jpeg'),
                                   ),
-                                  title: Text('SarojKumarPadhi'.tr,
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.grey[700]
-                                    ),),
-                                  subtitle: Text('Please share if to appriciate us'.tr,
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.grey[400]
-                                    ),
+                                  title: Text(
+                                    'SarojKumarPadhi'.tr,
+                                    style: TextStyle(fontWeight: FontWeight.bold, color: Colors.grey[700]),
+                                  ),
+                                  subtitle: Text(
+                                    'Please share if to appriciate us'.tr,
+                                    style: TextStyle(fontWeight: FontWeight.bold, color: Colors.grey[400]),
                                   ),
                                 ),
                               ),
-
-                              Text('May 25, 2019',
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.grey[400]
-                                ),),
+                              Text(
+                                'May 25, 2019',
+                                style: TextStyle(fontWeight: FontWeight.bold, color: Colors.grey[400]),
+                              ),
                             ],
                           ),
-
                         ],
                       ),
                     ),
@@ -140,7 +132,7 @@ class _BookDetailsState extends State<BookDetails> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          widget.catDetailsMap['name'],
+                          widget.info.name,
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 21.0,
@@ -158,7 +150,7 @@ class _BookDetailsState extends State<BookDetails> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          widget.catDetailsMap['Writer'],
+                          widget.info.writer,
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             color: Colors.grey[500],
@@ -166,7 +158,7 @@ class _BookDetailsState extends State<BookDetails> {
                           ),
                         ),
                         Text(
-                          widget.catDetailsMap['LikedBy'] + ' Active Readers'.tr,
+                          widget.info.likedBy + ' Active Readers'.tr,
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             color: Colors.grey[500],
@@ -189,7 +181,7 @@ class _BookDetailsState extends State<BookDetails> {
                           width: 3,
                         ),
                         Text(
-                          widget.catDetailsMap['LikedBy'] + ' Active Readers'.tr,
+                          widget.info.likedBy + ' Active Readers'.tr,
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             color: Colors.grey[400],
@@ -209,9 +201,7 @@ class _BookDetailsState extends State<BookDetails> {
               height: 120,
               decoration: BoxDecoration(
                 color: Colors.grey[200],
-                borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(20),
-                    topRight: Radius.circular(20)),
+                borderRadius: BorderRadius.only(topLeft: Radius.circular(20), topRight: Radius.circular(20)),
               ),
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 25),
@@ -232,13 +222,13 @@ class _BookDetailsState extends State<BookDetails> {
                         width: 50,
                         child: isFavorite
                             ? Icon(
-                          Icons.favorite_rounded,
-                          color: Colors.redAccent,
-                        )
+                                Icons.favorite_rounded,
+                                color: Colors.redAccent,
+                              )
                             : Icon(
-                          Icons.favorite_border_rounded,
-                          color: Colors.white,
-                        ),
+                                Icons.favorite_border_rounded,
+                                color: Colors.white,
+                              ),
                         decoration: BoxDecoration(
                           color: primaryColor,
                           borderRadius: BorderRadius.circular(10),
