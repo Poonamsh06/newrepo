@@ -1,12 +1,14 @@
+import 'package:book_app_chief_suraj/aarti_page.dart';
 import 'package:book_app_chief_suraj/models/book.dart';
 import 'package:book_app_chief_suraj/responsive.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
 import '../drawer/configration/configration.dart';
 import 'books_details.dart';
 
 class HomeScreen extends StatefulWidget {
+  const HomeScreen({Key? key}) : super(key: key);
+
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }
@@ -26,18 +28,18 @@ class _HomeScreenState extends State<HomeScreen> {
               color: Colors.white,
               borderRadius: BorderRadius.circular(25),
             )
-          : BoxDecoration(color: Colors.white),
+          : const BoxDecoration(color: Colors.white),
       transform: Matrix4.translationValues(xOffset, yOffset, 0)..scale(scaleFactor),
-      duration: Duration(milliseconds: 250),
+      duration: const Duration(milliseconds: 250),
       child: SingleChildScrollView(
         child: SafeArea(
           child: Column(
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 5.0,
               ),
               Container(
-                margin: EdgeInsets.symmetric(horizontal: 5.0),
+                margin: const EdgeInsets.symmetric(horizontal: 5.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -51,7 +53,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 isDrawerOpen = false;
                               });
                             },
-                            icon: Icon(Icons.arrow_back_ios),
+                            icon: const Icon(Icons.arrow_back_ios),
                           )
                         : IconButton(
                             onPressed: () {
@@ -62,7 +64,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 isDrawerOpen = true;
                               });
                             },
-                            icon: Icon(Icons.menu),
+                            icon: const Icon(Icons.menu),
                           ),
                     Center(
                       child: Row(
@@ -76,39 +78,49 @@ class _HomeScreenState extends State<HomeScreen> {
                               size: 20,
                             ),
                           ),
-                          Text(
+                          const Text(
                             'Puja, ',
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                          Text('Purohit'),
+                          const Text('Purohit'),
                         ],
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.only(right: 10.0),
-                      child: CircleAvatar(
+                      margin: const EdgeInsets.only(right: 10.0),
+                      child: const CircleAvatar(
                         backgroundImage: AssetImage('lib/images/Lucifer.jpeg'),
                       ),
                     ),
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10.0,
               ),
               Container(
                 decoration: BoxDecoration(
                   color: Colors.grey[200],
-                  borderRadius: BorderRadius.only(topRight: Radius.circular(25), topLeft: Radius.circular(25)),
+                  borderRadius: const BorderRadius.only(topRight: Radius.circular(25), topLeft: Radius.circular(25)),
                 ),
                 child: Column(
-                  children: [
+                  children: const [
                     SizedBox(
                       height: 30.0,
                     ),
                     SearchBar(),
+                    // InkWell(
+                    //       onTap: () {
+                    //         Navigator.push(
+                    //             context,
+                    //             MaterialPageRoute(
+                    //               builder: (context) => TextReader(textPath),
+                    //             ));
+                    //         //child: ArtiSection()),
+                    //      },
+
                     ArtiSection(),
                     SizedBox(
                       height: 30.0,
@@ -135,7 +147,7 @@ class BooksSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return GridView.builder(
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: ResponsiveWidget.isSmallScreen(context) ? 1 : 2, childAspectRatio: 1.8),
-      physics: ScrollPhysics(),
+      physics: const ScrollPhysics(),
       itemCount: books.length,
       scrollDirection: Axis.vertical,
       shrinkWrap: true,
@@ -146,7 +158,7 @@ class BooksSection extends StatelessWidget {
           },
           child: Container(
             height: 230,
-            margin: EdgeInsets.symmetric(horizontal: 20),
+            margin: const EdgeInsets.symmetric(horizontal: 20),
             child: BookCard(books[index], index),
           ),
         );
@@ -160,7 +172,7 @@ class BookCard extends StatelessWidget {
 
   BookInfo info;
 
-  BookCard(this.info, this.index);
+  BookCard(this.info, this.index, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -175,7 +187,7 @@ class BookCard extends StatelessWidget {
                   borderRadius: BorderRadius.circular(20),
                   boxShadow: shadowList,
                 ),
-                margin: EdgeInsets.only(top: 40),
+                margin: const EdgeInsets.only(top: 40),
               ),
               Align(
                   child: Padding(
@@ -187,11 +199,11 @@ class BookCard extends StatelessWidget {
         ),
         Expanded(
           child: Container(
-            margin: EdgeInsets.only(top: 65, bottom: 20),
-            padding: EdgeInsets.all(15),
+            margin: const EdgeInsets.only(top: 65, bottom: 20),
+            padding: const EdgeInsets.all(15),
             decoration: BoxDecoration(
               color: Colors.white,
-              borderRadius: BorderRadius.only(topRight: Radius.circular(20), bottomRight: Radius.circular(20)),
+              borderRadius: const BorderRadius.only(topRight: Radius.circular(20), bottomRight: Radius.circular(20)),
               boxShadow: shadowList,
             ),
             child: Column(
@@ -238,12 +250,12 @@ class BookCard extends StatelessWidget {
                       color: primaryColor,
                       size: 18,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 3,
                     ),
                     Text(
                       'Read'.tr,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontWeight: FontWeight.bold,
                         color: Color.fromARGB(255, 102, 179, 105),
                       ),
@@ -260,34 +272,45 @@ class BookCard extends StatelessWidget {
 }
 
 class ArtiSection extends StatelessWidget {
-  const ArtiSection({Key? key}) : super(key: key);
+  //final textPath;
+  const ArtiSection({Key? key, }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: 120,
       child: ListView.builder(
           scrollDirection: Axis.horizontal,
           itemCount: artis.length,
           itemBuilder: (context, index) {
             return Container(
-              padding: EdgeInsets.all(10),
+              padding: const EdgeInsets.all(10),
               child: Column(
                 children: [
-                  Container(
-                    padding: EdgeInsets.all(10),
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(10),
-                      boxShadow: shadowList,
-                    ),
-                    child: Image(
-                      image: AssetImage(artis[index].imagePath),
-                      height: 50,
-                      width: 50,
+                  InkWell(
+                  onTap: () {
+            Navigator.push(
+            context,
+            MaterialPageRoute(
+            builder: (context) =>  AartiPage(),
+            ));
+
+            },
+                    child: Container(
+                      padding: const EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(10),
+                        boxShadow: shadowList,
+                      ),
+                      child: Image(
+                        image: AssetImage(artis[index].imagePath),
+                        height: 50,
+                        width: 50,
+                      ),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10.0,
                   ),
                   Text(
@@ -310,11 +333,11 @@ class SearchBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 15.0),
+      margin: const EdgeInsets.symmetric(horizontal: 15.0),
       child: TextField(
         decoration: InputDecoration(
           enabledBorder: OutlineInputBorder(
-            borderSide: BorderSide(color: Colors.transparent),
+            borderSide: const BorderSide(color: Colors.transparent),
             borderRadius: BorderRadius.circular(15),
           ),
           focusedBorder: OutlineInputBorder(

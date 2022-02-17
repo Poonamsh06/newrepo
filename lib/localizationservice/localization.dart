@@ -7,10 +7,10 @@ import '../lang/hi_IN.dart';
 
 class LocalizationService extends Translations {
   // Default locale
-  static final locale = Locale('en', 'US');
+  static const locale = Locale('en', 'US');
 
   // fallbackLocale saves the day when the locale gets in trouble
-  static final fallbackLocale = Locale('en', 'US');
+  static const fallbackLocale = Locale('en', 'US');
 
   // Supported languages
   // Needs to be same order with locales
@@ -19,8 +19,8 @@ class LocalizationService extends Translations {
   // Supported locales
   // Needs to be same order with langs
   static final locales = [
-    Locale('en', 'US'),
-    Locale('hi', 'IN'),
+    const Locale('en', 'US'),
+    const Locale('hi', 'IN'),
   ];
 
   // Keys and their translations
@@ -38,7 +38,7 @@ class LocalizationService extends Translations {
     final box = GetStorage();
     box.write('lng', lang);
 
-    Get.updateLocale(locale ?? Locale('eng'));
+    Get.updateLocale(locale ?? const Locale('eng'));
   }
 
   // Finds language in `langs` list and returns it as Locale
@@ -57,9 +57,9 @@ class LocalizationService extends Translations {
       final locale =
       LocalizationService().getLocaleFromLanguage(box.read('lng'));
 
-      defaultLocale = locale ?? Locale('eng');
+      defaultLocale = locale ?? const Locale('eng');
     } else {
-      defaultLocale = Locale(
+      defaultLocale = const Locale(
         'en',
         'US',
       );
@@ -71,6 +71,6 @@ class LocalizationService extends Translations {
   String getCurrentLang() {
     final box = GetStorage();
 
-    return box.read('lng') != null ? box.read('lng') : "English";
+    return box.read('lng') ?? "English";
   }
 }

@@ -2,14 +2,11 @@ import 'package:book_app_chief_suraj/models/book.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
-import 'package:share/share.dart';
-
 import '../drawer/configration/configration.dart';
 
 // ignore: must_be_immutable
 class BookDetails extends StatefulWidget {
-  BookDetails({required this.info});
+  BookDetails({Key? key, required this.info}) : super(key: key);
 
   BookInfo info;
 
@@ -44,7 +41,7 @@ class _BookDetailsState extends State<BookDetails> {
                   child: Container(
                     color: Colors.white,
                     child: Container(
-                      margin: EdgeInsets.fromLTRB(10, 80, 10, 120),
+                      margin: const EdgeInsets.fromLTRB(10, 80, 10, 120),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -55,7 +52,7 @@ class _BookDetailsState extends State<BookDetails> {
                             children: [
                               Expanded(
                                 child: ListTile(
-                                  leading: CircleAvatar(
+                                  leading: const CircleAvatar(
                                     backgroundImage: AssetImage('lib/images/Lucifer.jpeg'),
                                   ),
                                   title: Text(
@@ -83,7 +80,7 @@ class _BookDetailsState extends State<BookDetails> {
             ),
           ),
           Container(
-            margin: EdgeInsets.only(top: 30),
+            margin: const EdgeInsets.only(top: 30),
             child: Align(
               alignment: Alignment.topCenter,
               child: Row(
@@ -93,18 +90,18 @@ class _BookDetailsState extends State<BookDetails> {
                     onPressed: () {
                       Navigator.pop(context);
                     },
-                    icon: Icon(
+                    icon: const Icon(
                       Icons.arrow_back_ios_rounded,
                       color: Colors.white,
                     ),
                   ),
                   IconButton(
                     onPressed: () {
-                      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
                         content: Text("Sharing Book File"),
                       ));
                     },
-                    icon: Icon(
+                    icon: const Icon(
                       Icons.ios_share,
                       color: Colors.white,
                     ),
@@ -117,7 +114,7 @@ class _BookDetailsState extends State<BookDetails> {
             alignment: Alignment.center,
             child: Container(
               height: 140,
-              margin: EdgeInsets.symmetric(horizontal: 20),
+              margin: const EdgeInsets.symmetric(horizontal: 20),
               decoration: BoxDecoration(
                 boxShadow: shadowList,
                 borderRadius: BorderRadius.circular(20),
@@ -167,7 +164,7 @@ class _BookDetailsState extends State<BookDetails> {
                         ),
                       ],
                     ),
-                    SizedBox(height: 2),
+                    const SizedBox(height: 2),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.center,
@@ -177,7 +174,7 @@ class _BookDetailsState extends State<BookDetails> {
                           color: primaryColor,
                           size: 18,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 3,
                         ),
                         Text(
@@ -201,7 +198,7 @@ class _BookDetailsState extends State<BookDetails> {
               height: 120,
               decoration: BoxDecoration(
                 color: Colors.grey[200],
-                borderRadius: BorderRadius.only(topLeft: Radius.circular(20), topRight: Radius.circular(20)),
+                borderRadius: const BorderRadius.only(topLeft: Radius.circular(20), topRight: Radius.circular(20)),
               ),
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 25),
@@ -221,11 +218,11 @@ class _BookDetailsState extends State<BookDetails> {
                         height: 50,
                         width: 50,
                         child: isFavorite
-                            ? Icon(
+                            ? const Icon(
                                 Icons.favorite_rounded,
                                 color: Colors.redAccent,
                               )
-                            : Icon(
+                            : const Icon(
                                 Icons.favorite_border_rounded,
                                 color: Colors.white,
                               ),
@@ -236,7 +233,7 @@ class _BookDetailsState extends State<BookDetails> {
                         ),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 30,
                     ),
                     Expanded(
@@ -246,7 +243,7 @@ class _BookDetailsState extends State<BookDetails> {
                         child: Center(
                           child: Text(
                             'Read'.tr,
-                            style: TextStyle(
+                            style: const TextStyle(
                               fontSize: 18,
                               fontWeight: FontWeight.bold,
                               color: Colors.white,

@@ -6,6 +6,8 @@ import '../localizationservice/localization.dart';
 import '../drawer/configration/configration.dart';
 
 class DrawerScreen extends StatefulWidget {
+  const DrawerScreen({Key? key}) : super(key: key);
+
   @override
   _DrawerScreenState createState() => _DrawerScreenState();
 }
@@ -13,6 +15,7 @@ class DrawerScreen extends StatefulWidget {
 class _DrawerScreenState extends State<DrawerScreen> {
   late String lng;
 
+  @override
   void initState() {
     super.initState();
     lng = LocalizationService().getCurrentLang();
@@ -21,15 +24,15 @@ class _DrawerScreenState extends State<DrawerScreen> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(8.0),
+      padding: const EdgeInsets.all(8.0),
       color: primaryColor,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Container(
-            padding: EdgeInsets.fromLTRB(0, 30, 0, 0),
+            padding: const EdgeInsets.fromLTRB(0, 30, 0, 0),
             child: ListTile(
-              leading: CircleAvatar(
+              leading: const CircleAvatar(
                 backgroundImage: AssetImage('lib/images/Lucifer.jpeg'),
               ),
               title: Text(
@@ -76,14 +79,14 @@ class _DrawerScreenState extends State<DrawerScreen> {
                 CupertinoIcons.globe,
                 color: Colors.grey[500],
               ),
-              SizedBox(
+              const SizedBox(
                 width: 20,
               ),
               Text(
                 "Language".tr,
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.grey[500]),
               ),
-              Text("     "),
+              const Text("     "),
               DropdownButton<String>(
                 items: LocalizationService.langs.map((String value) {
                   return DropdownMenuItem<String>(

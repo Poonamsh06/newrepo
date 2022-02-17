@@ -1,5 +1,6 @@
 
 
+import 'package:book_app_chief_suraj/aarti_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:get_storage/get_storage.dart';
@@ -14,16 +15,18 @@ void main() async{
   runApp(GetMaterialApp(
     translations: LocalizationService(), // your translations
     locale: LocalizationService().getCurrentLocale(), // translations will be displayed in that locale
-    fallbackLocale: Locale(
+    fallbackLocale: const Locale(
       'en',
       'US',
     ),
-    home: Home(),
+    home:const Home(),
     debugShowCheckedModeBanner: false,
   ));
 }
 
 class Home extends StatefulWidget {
+  const Home({Key? key}) : super(key: key);
+
   @override
   State<Home> createState() => _HomeState();
 }
@@ -41,7 +44,7 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
-        children: [
+        children: const [
           DrawerScreen(),
           HomeScreen(),
         ],

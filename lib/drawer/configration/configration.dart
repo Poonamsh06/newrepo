@@ -2,22 +2,38 @@ import 'package:book_app_chief_suraj/models/arti.dart';
 import 'package:book_app_chief_suraj/models/book.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
-Color primaryColor = Color(0xff376565);
-
-List<BoxShadow> shadowList = [BoxShadow(color: (Colors.grey[400])!, blurRadius: 30, offset: Offset(0, 10))];
+Color primaryColor = const Color(0xff376565);
+List<BoxShadow> shadowList = [BoxShadow(color: (Colors.grey[400])!, blurRadius: 30, offset: const Offset(0, 10))];
 
 List<ArtiInfo> artis = [
-  ArtiInfo('Shiv Arti'.tr,'lib/images/cat.png'),
-  ArtiInfo('Lakshmi Mata Arti'.tr,'lib/images/dog.png'),
-  ArtiInfo('Sarawati Arti'.tr,'lib/images/horse.png'),
-  ArtiInfo('Durga Mata Arti'.tr,'lib/images/parrot.png'),
-  ArtiInfo('Ambe Mata Arti'.tr,'lib/images/rabbit.png'),
-  ArtiInfo('Gayatri MAta Arti'.tr,'lib/images/cat.png'),
-  ArtiInfo('Sri Ganesha Arti'.tr,'lib/images/dog.png'),
-  ArtiInfo('Sri Gagdish Arti'.tr,'lib/images/horse.png'),
-  ArtiInfo('Sri Krishna Arti'.tr,'lib/images/parrot.png'),
-  ArtiInfo('Santoshi Mata Arti'.tr,'lib/images/rabbit.png'),
+  ArtiInfo('Shiv Aarti'.tr,'lib/images/ganpati1.png','lib/assets/hello.md'),
+  ArtiInfo('Maa Lakshmi Aarti'.tr,'lib/images/ganpati1.png','lib/assets/hello.md'),
+  ArtiInfo('Maa Saraswati Aarti'.tr,'lib/images/ganpati1.png','lib/assets/hello.md'),
+  ArtiInfo('Maa Durga Aarti'.tr,'lib/images/ganpati1.png','lib/assets/hello.md'),
+  ArtiInfo('Maa Ambe Aarti'.tr,'lib/images/ganpati1.png','lib/assets/hello.md'),
+  ArtiInfo('Maa Gayatri Aarti'.tr,'lib/images/ganpati1.png','lib/assets/hello.md'),
+  ArtiInfo('Shri Ganesh Aarti'.tr,'lib/images/ganpati1.png','lib/assets/hello.md'),
+  ArtiInfo('Shri jagdish Aarti'.tr,'lib/images/ganpati1.png','lib/assets/hello.md'),
+  ArtiInfo('Shri Krishna Aarti'.tr,'lib/images/ganpati1.png','lib/assets/hello.md'),
+  ArtiInfo('Santoshi Mata Aarti'.tr,'lib/images/ganpati1.png','lib/assets/hello.md'),
+  ArtiInfo('Shri Ram Aarti'.tr,'lib/images/ganpati1.png','lib/assets/hello.md'),
+  ArtiInfo('Kali Maa Aarti'.tr, 'lib/images/ganpati1.png','lib/assets/hello.md'),
+  ArtiInfo('Shri Ganpati Aarti'.tr, 'lib/images/ganpati1.png','lib/assets/hello.md'),
+  ArtiInfo('Hanumaan Aarti'.tr, 'lib/images/ganpati1.png','lib/assets/hello.md'),
+  ArtiInfo('Sharda Maa Aarti'.tr, 'lib/images/ganpati1.png','lib/assets/hello.md'),
+  ArtiInfo('Maa Durga Aarti'.tr, 'lib/images/ganpati1.png','lib/assets/hello.md'),
+  ArtiInfo('Sai Baba Aarti '.tr, 'lib/images/ganpati1.png','lib/assets/hello.md'),
+  ArtiInfo('Shri Vishkarma ji Aarti'.tr, 'lib/images/ganpati1.png','lib/assets/hello.md'),
+  ArtiInfo('Shitla Maa Aarti'.tr, 'lib/images/ganpati1.png','lib/assets/hello.md'),
+  ArtiInfo('Shri Vishnu Aarti'.tr, 'lib/images/ganpati1.png','lib/assets/hello.md'),
+  ArtiInfo('Maa Vaishno Aarti'.tr, 'lib/images/ganpati1.png','lib/assets/hello.md'),
+  ArtiInfo('Maa Paarvati Aarti'.tr, 'lib/images/ganpati1.png','lib/assets/hello.md'),
+  ArtiInfo('Shri Bala ji Aarti'.tr, 'lib/images/ganpati1.png','lib/assets/hello.md'),
+  ArtiInfo('Shri Prshuram Aarti'.tr, 'lib/images/ganpati1.png','lib/assets/hello.md'),
+  ArtiInfo('Maa Gouri Aarti'.tr, 'lib/images/ganpati1.png','lib/assets/hello.md'),
+  //ArtiInfo('Maa Saraswati Aarti'.tr, 'lib/images/rabbit.png',''),
+  ArtiInfo('Maa Ganga Aarti'.tr, 'lib/images/ganpati1.png','lib/assets/hello.md'),
+
 ];
 
 List<Map> navList = [
