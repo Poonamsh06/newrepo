@@ -46,7 +46,7 @@ class AartiPage extends StatelessWidget {
                       color: const Color(0xffFFF3E2),
                       // margin: const EdgeInsets.all(16),
                       child: Container(
-                        padding: const EdgeInsets.all(10),
+                        padding: const EdgeInsets.all(8),
                         child: Expanded(
                           child: Row(
                             children: [
@@ -291,74 +291,77 @@ class _MyHomePageState extends State<MyHomePage>
                 itemBuilder: (context, index){
         
                return  Expanded(
-                 child: Card(
-                    
-                             
-                     elevation: 7.0,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(18.0),
-                            
-                          ),
-                          color: const Color(0xffFFF3E2),
-                    child: Container(
-                      padding: const EdgeInsets.all(10),
-                      child: Row(
-                        // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          
-                               Container(
-                                    padding: const EdgeInsets.all(10),
-                                    decoration: const BoxDecoration(
-                                      borderRadius:
-                                          BorderRadius.all(Radius.circular(20)),
-                                      color: Colors.white,
-                                    ),
-                                    height: 80,
-                                    width: 80.0,
-                                    child: CircleAvatar(
-                                      // radius: 16,
-                                      backgroundColor: Colors.white,
-                                      backgroundImage: AssetImage(
-                                        artis[0].imagePath,
+                 child: Padding(
+                   padding: const EdgeInsets.all(8.0),
+                   child: Card(
+
+
+                       elevation: 7.0,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(18.0),
+
+                            ),
+                            color: const Color(0xffFFF3E2),
+                      child: Container(
+                        padding: const EdgeInsets.all(10),
+                        child: Row(
+                          // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+
+                                 Container(
+                                      padding: const EdgeInsets.all(10),
+                                      decoration: const BoxDecoration(
+                                        borderRadius:
+                                            BorderRadius.all(Radius.circular(20)),
+                                        color: Colors.white,
+                                      ),
+                                      height: 80,
+                                      width: 80.0,
+                                      child: CircleAvatar(
+                                        // radius: 16,
+                                        backgroundColor: Colors.white,
+                                        backgroundImage: AssetImage(
+                                          artis[0].imagePath,
+                                        ),
                                       ),
                                     ),
-                                  ),
-                                  SizedBox(width: 45,),
-                                  Column(
-                                    children: [
-                                                Text('Shiv arti',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20,color: Colors.amber),),
-                                  
-                        
-                         Row(
-                           children: [
-                             InkWell(child: Icon(CupertinoIcons.backward_fill),onTap: (){
-                           audioPlayer.seekBy(Duration(seconds: -10));
-                         },),
-                          GestureDetector(
-                            onTap: () {
-                              AnimateIcon();
-                            },
-                            child: AnimatedIcon(
-                              icon: AnimatedIcons.play_pause,
-                              progress: iconController,
-                              size: 50,
-                              color: Colors.black,
+                                    SizedBox(width: 45,),
+                                    Column(
+                                      children: [
+                                                  Text('Shiv arti',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20,color: Colors.amber),),
+
+
+                           Row(
+                             children: [
+                               InkWell(child: Icon(CupertinoIcons.backward_fill),onTap: (){
+                             audioPlayer.seekBy(Duration(seconds: -10));
+                           },),
+                            GestureDetector(
+                              onTap: () {
+                                AnimateIcon();
+                              },
+                              child: AnimatedIcon(
+                                icon: AnimatedIcons.play_pause,
+                                progress: iconController,
+                                size: 50,
+                                color: Colors.black,
+                              ),
                             ),
-                          ),
-                          InkWell(child: Icon(CupertinoIcons.forward_fill),onTap: (){
-                            audioPlayer.seekBy(Duration(seconds: 10));
-                            audioPlayer.seek(Duration(seconds: 10));
-                            audioPlayer.next();
-                          },),
-                           ],
-                         )
-                                    ],
-                                  )
-                         
-                        ],
+                            InkWell(child: Icon(CupertinoIcons.forward_fill),onTap: (){
+                              audioPlayer.seekBy(Duration(seconds: 10));
+                              audioPlayer.seek(Duration(seconds: 10));
+                              audioPlayer.next();
+                            },),
+                             ],
+                           )
+                                      ],
+                                    )
+
+                          ],
+                        ),
                       ),
                     ),
-                  ),
+                 ),
                );
                 }
               ),

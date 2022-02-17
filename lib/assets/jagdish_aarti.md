@@ -1,4 +1,6 @@
-                                ॥ आरती श्री जगदीशजी ॥
+![The San Juan Mountains are beautiful!](lib/images/img.png "San Juan Mountains")
+
+#                                 ॥ आरती श्री जगदीशजी ॥
 
                                 ॐ जय जगदीश हरे, स्वामी ! जय जगदीश हरे।
 

@@ -7,7 +7,7 @@ List<BoxShadow> shadowList = [BoxShadow(color: (Colors.grey[400])!, blurRadius: 
 
 List<ArtiInfo> artis = [
   ArtiInfo('Shiv Aarti'.tr,'lib/images/ganpati1.png','lib/assets/hello.md'),
-  ArtiInfo('Maa Lakshmi Aarti'.tr,'lib/images/ganpati1.png','lib/assets/hello.md'),
+  ArtiInfo('Maa Lakshmi Aarti'.tr,'lib/images/ganpati1.png','lib/assets/ganesh_aarti.md'),
   ArtiInfo('Maa Saraswati Aarti'.tr,'lib/images/ganpati1.png','lib/assets/hello.md'),
   ArtiInfo('Maa Durga Aarti'.tr,'lib/images/ganpati1.png','lib/assets/hello.md'),
   ArtiInfo('Maa Ambe Aarti'.tr,'lib/images/ganpati1.png','lib/assets/hello.md'),

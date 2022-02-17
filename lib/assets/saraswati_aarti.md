@@ -1,4 +1,7 @@
-                                 ॥ आरती श्री सरस्वती जी ॥
+![The San Juan Mountains are beautiful!](lib/images/img.png "San Juan Mountains")
+
+#                                  ॥ आरती श्री सरस्वती जी ॥
+
                                  जय सरस्वती माता,मैया जय सरस्वती माता।
 
                                  सदगुण वैभव शालिनी,त्रिभुवन विख्याता॥

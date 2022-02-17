@@ -1,4 +1,7 @@
-                                    ॥ आरती श्री लक्ष्मी जी ॥
+![The San Juan Mountains are beautiful!](lib/images/img.png "San Juan Mountains")
+
+#                                     ॥ आरती श्री लक्ष्मी जी ॥
+
                                     ॐ जय लक्ष्मी माता,मैया जय लक्ष्मी माता।
 
                                     तुमको निशिदिन सेवत,हरि विष्णु विधाता॥

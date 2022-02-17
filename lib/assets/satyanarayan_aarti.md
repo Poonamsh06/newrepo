@@ -1,4 +1,7 @@
-                                  ॥ आरती श्री सत्यनारायणजी ॥
+![The San Juan Mountains are beautiful!](lib/images/img.png "San Juan Mountains")
+
+#                                   ॥ आरती श्री सत्यनारायणजी ॥
+
                                   जय लक्ष्मीरमणा श्री जय लक्ष्मीरमणा।
 
                                   सत्यनारायण स्वामी जनपातक हरणा॥
