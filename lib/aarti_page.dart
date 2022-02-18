@@ -7,7 +7,9 @@ import 'package:flutter_markdown/flutter_markdown.dart';
 import 'drawer/configration/configration.dart';
 
 class AartiPage extends StatelessWidget {
-  const AartiPage({Key? key}) : super(key: key);
+  // const AartiPage({Key? key}) : super(key: key);
+  int item_no;
+  AartiPage(this.item_no);
 
   get index => [0, 1, 2, 3, 4];
 
@@ -97,7 +99,7 @@ class AartiPage extends StatelessWidget {
       Expanded(
         flex: 4,
         // width: MediaQuery.of(context).size.width * 0.5,
-        child: AartiDetails(),
+        child: AartiDetails(item_no),
       ),
       const VerticalDivider(
         thickness: 0.5,
@@ -116,22 +118,24 @@ class AartiPage extends StatelessWidget {
 }
 
 class AartiDetails extends StatelessWidget {
+  int item_no;
+  AartiDetails(this.item_no);
   var style = MarkdownStyleSheet(
     textAlign: WrapAlignment.center,
     h1Align: WrapAlignment.center,
     h1: const TextStyle(color: Colors.orangeAccent, fontSize: 40),
     textScaleFactor: 1.5,
   );
-  AartiDetails({Key? key}) : super(key: key);
+ 
 
-  get index => 0;
+
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
         body: FutureBuilder(
-            future: rootBundle.loadString(artis[index].textPath),
+            future: rootBundle.loadString(artis[item_no].textPath),
             builder: (BuildContext context, AsyncSnapshot<String> snapshot) {
               if (snapshot.hasData) {
                 return Markdown(
@@ -142,111 +146,14 @@ class AartiDetails extends StatelessWidget {
               return const Center(
                 child: CircularProgressIndicator(),
               );
-            }),
+            }
+            ),
 
 
       ),
     );
   }
 }
-
-class AartiSection extends StatelessWidget {
-  AartiSection({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return SafeArea(
-        child: Scaffold(
-            body: Row(children: [
-      Expanded(
-        flex: 3,
-        child: Container(
-          color: Colors.white,
-          child: ListView.builder(
-              shrinkWrap: true,
-              itemCount: artis.length,
-              itemBuilder: (context, index) {
-                return Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Card(
-                    elevation: 7.0,
-
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(18.0),
-                    ),
-                    color: const Color(0xffFFF3E2),
-                    // margin: const EdgeInsets.all(16),
-                    child: InkWell(
-                      onTap: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => AartiDetails(),
-                            ));
-                      },
-                      child: Container(
-                        padding: const EdgeInsets.all(10),
-                        child: Row(
-                          children: [
-                            Container(
-                              padding: const EdgeInsets.all(10),
-                              decoration: const BoxDecoration(
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(20)),
-                                color: Colors.white,
-                              ),
-                              height: 80,
-                              width: 80.0,
-                              child: CircleAvatar(
-                                // radius: 16,
-                                backgroundColor: Colors.white,
-                                backgroundImage: AssetImage(
-                                  artis[index].imagePath,
-                                ),
-                              ),
-                            ),
-
-                            const SizedBox(
-                              width: 25.0,
-                            ),
-                            // RichText(text: TextSpan())
-                            Text(
-                              artis[index].name,
-                              style: const TextStyle(
-                                fontSize: 18,
-                                color: Colors.black,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                );
-              }),
-        ),
-      ),
-
-      const VerticalDivider(
-        thickness: 0.3,
-        color: Colors.black,
-      ),
-      Expanded(
-       flex: 4,
-        child: AartiDetails(),
-      ),
-
-      const VerticalDivider(
-        thickness: 0.5,
-        color: Colors.black,
-      ),
-      Expanded(flex: 3,child:MyHomePage('lib/assets/assets_music_music1.mp3') ,),
-
-
-    ])));
-  }
-}
-
 class MyHomePage extends StatefulWidget {
   String link;
   MyHomePage(this.link);

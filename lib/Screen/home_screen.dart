@@ -292,7 +292,7 @@ class ArtiSection extends StatelessWidget {
             Navigator.push(
             context,
             MaterialPageRoute(
-            builder: (context) =>  AartiPage(),
+            builder: (context) =>  AartiPage(index),
             ));
 
             },
