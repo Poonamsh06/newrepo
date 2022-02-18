@@ -1,6 +1,6 @@
 ![The San Juan Mountains are beautiful!](lib/images/img.png "San Juan Mountains")
 
-#  ॥ आरती श्री गंगाजी ॥
+#   आरती श्री गंगाजी 
 
 ॐ जय गंगे माता,मैया जय गंगे माता।
 

@@ -55,5 +55,5 @@ const Map<String, String> enUS = {
   'Maa Saraswati Aarti':'Maa Saraswati Aarti',
   'Maa Gouri Aarti':'Maa Gouri Aarti',
   'Maa Ganga Aarti ':'Maa Ganga Aarti',
-
+  'Mahadev Aarti' :'Mahadev Aarti'
 };

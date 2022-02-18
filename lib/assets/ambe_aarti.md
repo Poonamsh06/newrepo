@@ -1,6 +1,6 @@
 ![The San Juan Mountains are beautiful!](lib/images/img.png "San Juan Mountains")
 
-#  ॥ आरती श्री अम्बा जी ॥
+#   आरती श्री अम्बा जी 
 
 जय अम्बे गौरी,मैया जय श्यामा गौरी।
 
