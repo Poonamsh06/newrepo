@@ -126,10 +126,6 @@ class AartiDetails extends StatelessWidget {
     h1: const TextStyle(color: Colors.orangeAccent, fontSize: 40),
     textScaleFactor: 1.5,
   );
- 
-
-
-
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -201,12 +197,9 @@ class _MyHomePageState extends State<MyHomePage>
                  child: Padding(
                    padding: const EdgeInsets.all(8.0),
                    child: Card(
-
-
                        elevation: 7.0,
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(18.0),
-
                             ),
                             color: const Color(0xffFFF3E2),
                       child: Container(
@@ -263,7 +256,6 @@ class _MyHomePageState extends State<MyHomePage>
                            )
                                       ],
                                     )
-
                           ],
                         ),
                       ),

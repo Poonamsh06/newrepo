@@ -29,7 +29,8 @@ class _HomeScreenState extends State<HomeScreen> {
               borderRadius: BorderRadius.circular(25),
             )
           : const BoxDecoration(color: Colors.white),
-      transform: Matrix4.translationValues(xOffset, yOffset, 0)..scale(scaleFactor),
+      transform: Matrix4.translationValues(xOffset, yOffset, 0)
+        ..scale(scaleFactor),
       duration: const Duration(milliseconds: 250),
       child: SingleChildScrollView(
         child: SafeArea(
@@ -103,7 +104,9 @@ class _HomeScreenState extends State<HomeScreen> {
               Container(
                 decoration: BoxDecoration(
                   color: Colors.grey[200],
-                  borderRadius: const BorderRadius.only(topRight: Radius.circular(25), topLeft: Radius.circular(25)),
+                  borderRadius: const BorderRadius.only(
+                      topRight: Radius.circular(25),
+                      topLeft: Radius.circular(25)),
                 ),
                 child: Column(
                   children: const [
@@ -111,16 +114,6 @@ class _HomeScreenState extends State<HomeScreen> {
                       height: 30.0,
                     ),
                     SearchBar(),
-                    // InkWell(
-                    //       onTap: () {
-                    //         Navigator.push(
-                    //             context,
-                    //             MaterialPageRoute(
-                    //               builder: (context) => TextReader(textPath),
-                    //             ));
-                    //         //child: ArtiSection()),
-                    //      },
-
                     ArtiSection(),
                     SizedBox(
                       height: 30.0,
@@ -146,7 +139,9 @@ class BooksSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GridView.builder(
-      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: ResponsiveWidget.isSmallScreen(context) ? 1 : 2, childAspectRatio: 1.8),
+      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: ResponsiveWidget.isSmallScreen(context) ? 1 : 2,
+          childAspectRatio: 1.8),
       physics: const ScrollPhysics(),
       itemCount: books.length,
       scrollDirection: Axis.vertical,
@@ -183,7 +178,9 @@ class BookCard extends StatelessWidget {
             children: [
               Container(
                 decoration: BoxDecoration(
-                  color: (index % 2 == 0) ? Colors.blueGrey[200] : Colors.orangeAccent[200],
+                  color: (index % 2 == 0)
+                      ? Colors.blueGrey[200]
+                      : Colors.orangeAccent[200],
                   borderRadius: BorderRadius.circular(20),
                   boxShadow: shadowList,
                 ),
@@ -192,7 +189,8 @@ class BookCard extends StatelessWidget {
               Align(
                   child: Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: Hero(tag: 'pet${info.id}', child: Image.asset(info.imagePath)),
+                child: Hero(
+                    tag: 'pet${info.id}', child: Image.asset(info.imagePath)),
               )),
             ],
           ),
@@ -203,7 +201,9 @@ class BookCard extends StatelessWidget {
             padding: const EdgeInsets.all(15),
             decoration: BoxDecoration(
               color: Colors.white,
-              borderRadius: const BorderRadius.only(topRight: Radius.circular(20), bottomRight: Radius.circular(20)),
+              borderRadius: const BorderRadius.only(
+                  topRight: Radius.circular(20),
+                  bottomRight: Radius.circular(20)),
               boxShadow: shadowList,
             ),
             child: Column(
@@ -273,7 +273,9 @@ class BookCard extends StatelessWidget {
 
 class ArtiSection extends StatelessWidget {
   //final textPath;
-  const ArtiSection({Key? key, }) : super(key: key);
+  const ArtiSection({
+    Key? key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -288,14 +290,13 @@ class ArtiSection extends StatelessWidget {
               child: Column(
                 children: [
                   InkWell(
-                  onTap: () {
-            Navigator.push(
-            context,
-            MaterialPageRoute(
-            builder: (context) =>  AartiPage(index),
-            ));
-
-            },
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => AartiPage(index),
+                          ));
+                    },
                     child: Container(
                       padding: const EdgeInsets.all(10),
                       decoration: BoxDecoration(
