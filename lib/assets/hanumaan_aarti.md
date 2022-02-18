@@ -1,6 +1,6 @@
 ![The San Juan Mountains are beautiful!](lib/images/img.png "San Juan Mountains")
 
-#  ॥ आरती श्री हनुमानजी ॥
+#   आरती श्री हनुमानजी 
 
 आरती कीजै हनुमान लला की।दुष्ट दलन रघुनाथ कला की॥
 

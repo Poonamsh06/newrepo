@@ -74,11 +74,13 @@ class AartiPage extends StatelessWidget {
                                 width: 25.0,
                               ),
                               // RichText(text: TextSpan())
-                              Text(
-                                artis[index].name,
-                                style: const TextStyle(
-                                  fontSize: 18,
-                                  color: Colors.black,
+                              Expanded(
+                                child: Text(
+                                  artis[index].name,
+                                  style: const TextStyle(
+                                    fontSize: 18,
+                                    color: Colors.black,
+                                  ),
                                 ),
                               ),
                             ],
@@ -123,7 +125,7 @@ class AartiDetails extends StatelessWidget {
   var style = MarkdownStyleSheet(
     textAlign: WrapAlignment.center,
     h1Align: WrapAlignment.center,
-    h1: const TextStyle(color: Colors.orangeAccent, fontSize: 40),
+    h1: const TextStyle(color: Colors.orangeAccent, fontSize: 28),
     textScaleFactor: 1.5,
   );
  

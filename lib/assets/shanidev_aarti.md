@@ -1,6 +1,6 @@
 ![The San Juan Mountains are beautiful!](lib/images/img.png "San Juan Mountains")
 
-# शनि देव आरती
+#  शनि देव आरती
 
 जय जय श्री शनिदेव भक्तन हितकारी
 सूरज के पुत्र प्रभु चाय महतारी.

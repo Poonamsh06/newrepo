@@ -54,7 +54,7 @@ const Map<String, String> hiIN = {
   'Maa Saraswati Aarti':'मां सरस्वती आरती',
   'Maa Gouri Aarti':'मां गौरी आरती',
   'Maa Ganga Aarti ':'मां गंगा आरती',
-
+  'Mahadev Aarti' : 'महादेव आरती'
 
 
 };

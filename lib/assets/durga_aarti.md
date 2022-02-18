@@ -1,6 +1,6 @@
 ![The San Juan Mountains are beautiful!](lib/images/img.png "San Juan Mountains")
 
-#॥ आरती श्री दुर्गाजी ॥
+#  आरती श्री दुर्गाजी 
 
 अम्बे तू है जगदम्बे काली,जय दुर्गे खप्पर वाली,
 

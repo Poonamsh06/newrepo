@@ -1,6 +1,6 @@
 ![The San Juan Mountains are beautiful!](lib/images/img.png "San Juan Mountains")
 
-#   ॥ श्री गणेशजी की आरती ॥
+#   श्री गणेशजी की आरती 
 
 जय गणेश, जय गणेश,जय गणेश देवा।
 
